@@ -1,7 +1,7 @@
 import {
   UPDATE_UNPACKED_ITEMS_FILTER,
   UPDATE_PACKED_ITEMS_FILTER
-} from '../constants';
+} from '../components/TaskManager/constants';
 
 export const updateUnpackedItemsFilter = (text) => ({
   type: UPDATE_UNPACKED_ITEMS_FILTER,

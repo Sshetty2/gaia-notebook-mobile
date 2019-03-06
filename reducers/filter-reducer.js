@@ -1,4 +1,4 @@
-import { UPDATE_PACKED_ITEMS_FILTER, UPDATE_UNPACKED_ITEMS_FILTER } from './constants';
+import { UPDATE_PACKED_ITEMS_FILTER, UPDATE_UNPACKED_ITEMS_FILTER } from '../components/TaskManager/constants';
 
 export default function(state = { unpackedItemsFilter: '', packedItemsFilter: '' }, action) {
   if (action.type === UPDATE_UNPACKED_ITEMS_FILTER) {

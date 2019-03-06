@@ -1,4 +1,4 @@
-import { ADD_NEW_ITEM, REMOVE_ITEM, TOGGLE_ITEM, MARK_ALL_AS_UNPACKED, UNDO_ITEM_ACTION, REDO_ITEM_ACTION } from './constants';
+import { ADD_NEW_ITEM, REMOVE_ITEM, TOGGLE_ITEM, MARK_ALL_AS_UNPACKED, UNDO_ITEM_ACTION, REDO_ITEM_ACTION } from '../components/TaskManager/constants';
 
 export default function(state = {}, action) {
   const { past, present, future } = state;
