@@ -40,7 +40,8 @@ class NewItem extends Component {
 
 const styles = StyleSheet.create({
   NewItem: {
-    display: flex
+    flex: 1,
+    flexDirection: 'row'
   },
   NewItemInput: {
     width: '100%'
