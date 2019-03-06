@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 
+import {
+
+  StyleSheet,
+  Text
+} from 'react-native';
 
 class NewItem extends Component {
   handleChange = (event) => {
