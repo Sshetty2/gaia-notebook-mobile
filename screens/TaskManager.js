@@ -7,20 +7,27 @@ import UnpackedFilterContainer from '../containers/UnpackedFilterContainer';
 import PackedFilterContainer from '../containers/PackedFilterContainer';
 import UndoRedoContainer from '../containers/UndoRedoContainer'
 
-import './Application.css';
 
 class Application extends Component {
   render() {
     return (
-      <div className="Application">
+      <View style={styles.container}>
         <NewItemContainer />
-        <UndoRedoContainer />
+        {/* <UndoRedoContainer />
         <UnpackedItemsContainer title="Unpacked Items" render={() => <UnpackedFilterContainer />} />
         <PackedItemsContainer title="Packed Items" render={() => <PackedFilterContainer />} />
-        <MarkAllAsUnpackedContainer />
-      </div>
+        <MarkAllAsUnpackedContainer /> */}
+      </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    margin: 'auto',
+    maxWidth: '400px',
+  }
+});
+
 
 export default Application;
