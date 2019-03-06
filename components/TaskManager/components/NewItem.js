@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './NewItem.css';
+
 
 class NewItem extends Component {
   handleChange = (event) => {
@@ -17,17 +17,29 @@ class NewItem extends Component {
     const { value } = this.props;
 
     return (
-      <form className="NewItem" onSubmit={this.handleSubmit}>
-        <input
-          className="NewItem-input"
-          type="text"
-          value={value}
-          onChange={this.handleChange}
-        />
-        <input className="NewItem-submit button" type="submit" />
-      </form>
+    <Text style = {styles.NewItem} >
+      This is where the new item input might be?
+    </Text>
+      // <form className="NewItem" onSubmit={this.handleSubmit}>
+      //   <input
+      //     className="NewItem-input"
+      //     type="text"
+      //     value={value}
+      //     onChange={this.handleChange}
+      //   />
+      //   <input className="NewItem-submit button" type="submit" />
+      // </form>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  NewItem: {
+    display: flex
+  },
+  NewItemInput: {
+    width: '100%'
+  }
+});
 
 export default NewItem;
