@@ -2,8 +2,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import NewItem from '../../TaskManager/components/NewItem';
 
-import { updateNewItemValue } from '../actions/new-item-actions.js';
-import { addNewItem } from '../actions/items-actions';
+import { updateNewItemValue } from '../../TaskManager/actions/new-item-actions.js';
+import { addNewItem } from '../../TaskManager/actions/items-actions';
 
 const mapStateToProps = ({ newItemValue }) => ({ value: newItemValue });
 
