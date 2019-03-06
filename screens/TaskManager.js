@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import NewItemContainer from '../containers/NewItemContainer';
-import PackedItemsContainer from '../containers/PackedItemsContainer';
-import UnpackedItemsContainer from '../containers/UnpackedItemsContainer';
-import MarkAllAsUnpackedContainer from '../containers/MarkAllAsUnpackedContainer';
-import UnpackedFilterContainer from '../containers/UnpackedFilterContainer';
-import PackedFilterContainer from '../containers/PackedFilterContainer';
-import UndoRedoContainer from '../containers/UndoRedoContainer'
+import NewItemContainer from '../components/TaskManager/containers/NewItemContainer';
+// import PackedItemsContainer from '../containers/PackedItemsContainer';
+// import UnpackedItemsContainer from '../containers/UnpackedItemsContainer';
+// import MarkAllAsUnpackedContainer from '../containers/MarkAllAsUnpackedContainer';
+// import UnpackedFilterContainer from '../containers/UnpackedFilterContainer';
+// import PackedFilterContainer from '../containers/PackedFilterContainer';
+// import UndoRedoContainer from '../containers/UndoRedoContainer'
+
+import {
+  StyleSheet,
+  View,
+} from 'react-native';
 
 
 class Application extends Component {
