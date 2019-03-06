@@ -30,7 +30,7 @@ class Application extends Component {
 const styles = StyleSheet.create({
   container: {
     margin: 'auto',
-    maxWidth: '400px',
+    flex: .6
   }
 });
 
