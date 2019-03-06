@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import Filter from '../components/Filter';
+import Filter from '../../TaskManager/components/Filter';
 import { updateUnpackedItemsFilter } from '../actions/filter-actions';
 
 const mapStateToProps = ({ filter }) => {

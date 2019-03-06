@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Items from '../components/Items';
+import Items from '../../TaskManager/components/Items';
 
 import { toggleItem, removeItem } from '../actions/items-actions';
 

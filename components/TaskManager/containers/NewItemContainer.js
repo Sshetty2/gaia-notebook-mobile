@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import NewItem from '../components/NewItem';
+import NewItem from '../../TaskManager/components/NewItem';
 
 import { updateNewItemValue } from '../actions/new-item-actions.js';
 import { addNewItem } from '../actions/items-actions';
