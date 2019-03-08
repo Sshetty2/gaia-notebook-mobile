@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 
+import { Input } from 'react-native-elements';
+
+
 import {
 
   StyleSheet,
+  View,
   Text
 } from 'react-native';
 
-class NewItem extends Component {
+export default class NewItem extends Component {
   handleChange = (event) => {
     const value = event.target.value;
     this.props.updateNewItemValue(value);
@@ -22,18 +26,12 @@ class NewItem extends Component {
     const { value } = this.props;
 
     return (
-    <Text style = {styles.NewItem} >
-      This is where the new item input might be?
-    </Text>
-      // <form className="NewItem" onSubmit={this.handleSubmit}>
-      //   <input
-      //     className="NewItem-input"
-      //     type="text"
-      //     value={value}
-      //     onChange={this.handleChange}
-      //   />
-      //   <input className="NewItem-submit button" type="submit" />
-      // </form>
+    <View>
+    <Input
+      placeholder='INPUT WITH ICON'
+      leftIcon={{ type: 'font-awesome', name: 'chevron-left' }}
+    />
+    </View>
     );
   }
 }
@@ -48,4 +46,14 @@ const styles = StyleSheet.create({
   }
 });
 
-export default NewItem;
+
+
+      // <form className="NewItem" onSubmit={this.handleSubmit}>
+      //   <input
+      //     className="NewItem-input"
+      //     type="text"
+      //     value={value}
+      //     onChange={this.handleChange}
+      //   />
+      //   <input className="NewItem-submit button" type="submit" />
+      // </form>
