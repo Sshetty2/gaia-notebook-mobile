@@ -32,12 +32,12 @@ export default class NewItem extends Component {
         }, 1000);
       }}>
         {props => (
-          <View>
-            <Input style={styles.NewItemInput}
+          <View style={{flex: 1, flexDirection: 'row'}}>
+            <Input containerStyle = {{width: 50}}
               onBlur={props.handleBlur('email')}
               onChange={this.handleChange}
             />
-            <Button onPress={props.handleSubmit} title="Submit" />
+            <Button style={{width: 10 }} onPress={props.handleSubmit} title="Submit" />
           </View>
         )}
       </Formik>
@@ -48,10 +48,14 @@ export default class NewItem extends Component {
 const styles = StyleSheet.create({
   NewItem: {
     flex: 1,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: 'flex-end'
   },
   NewItemInput: {
-    width: '100%'
+    width: '70%'
+  },
+  NewItemButton: {
+    width: '30%'
   }
 });
 
