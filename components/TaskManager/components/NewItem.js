@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-
-import { Input } from 'react-native-elements';
-
-
-import {
-
-  StyleSheet,
-  View,
-  Text
-} from 'react-native';
+import { Button, Input } from 'react-native-elements';
+import {StyleSheet, View} from 'react-native';
+import { Formik } from 'formik';
 
 export default class NewItem extends Component {
-  handleChange = (event) => {
-    const value = event.target.value;
+
+  
+
+  handleChange = (text) => {
+    const value = text;
     this.props.updateNewItemValue(value);
   }
+
+
+  
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -26,12 +25,22 @@ export default class NewItem extends Component {
     const { value } = this.props;
 
     return (
-    <View>
-    <Input
-      placeholder='INPUT WITH ICON'
-      leftIcon={{ type: 'font-awesome', name: 'chevron-left' }}
-    />
-    </View>
+      <Formik initialValues={{ email: '' }} onSubmit={(values, actions) => {
+        setTimeout(() => {
+          alert(JSON.stringify(values, null, 2));
+          actions.setSubmitting(false);
+        }, 1000);
+      }}>
+        {props => (
+          <View>
+            <Input style={styles.NewItemInput}
+              onBlur={props.handleBlur('email')}
+              onChange={this.handleChange}
+            />
+            <Button onPress={props.handleSubmit} title="Submit" />
+          </View>
+        )}
+      </Formik>
     );
   }
 }
