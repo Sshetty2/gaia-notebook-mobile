@@ -6,7 +6,7 @@ class Item extends Component {
   render() {
     const { packed, id, value, onCheckOff, onRemove } = this.props;
     return (
-      <article className="Item">
+      <View className="Item">
         <label htmlFor={id}>
           <input
             type="checkbox"
@@ -19,7 +19,7 @@ class Item extends Component {
         <button className="Item-remove" onClick={onRemove}>
           Remove
         </button>
-      </article>
+      </View>
     );
   }
 }

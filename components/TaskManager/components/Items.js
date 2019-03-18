@@ -6,10 +6,10 @@ class Items extends Component {
   render() {
     const { title, items, onCheckOff, onRemove } = this.props;
     return (
-      <section className="Items">
-        <h2>
+      <View className="Items">
+        <Text h2>
           {title} ({items.length})
-        </h2>
+        </Text>
         { this.props.render && this.props.render() }
         {items.map(item => (
             <Item
@@ -19,7 +19,7 @@ class Items extends Component {
               {...item}
             />
           ))}
-      </section>
+      </View>
     );
   }
 }
