@@ -1,21 +1,15 @@
 import React, { Component } from 'react';
-import { Button } from 'react-native-elements';
-import {StyleSheet, View, TextInput} from 'react-native';
+import {StyleSheet, View, TextInput } from 'react-native';
 import { Formik } from 'formik';
-import { Input } from 'react-native-elements';
+import { Button, Input } from 'react-native-elements';
 
 
 export default class NewItem extends Component {
-
-  
 
   handleChange = (text) => {
     const value = text;
     this.props.updateNewItemValue(value);
   }
-
-
-  
 
   handleSubmit = (text) => {
     const { value } = this.props;
@@ -40,6 +34,8 @@ export default class NewItem extends Component {
 const styles = StyleSheet.create({
   NewItem: {
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   NewItemInput: {
     width: 120,

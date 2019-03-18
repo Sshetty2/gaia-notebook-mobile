@@ -28,11 +28,10 @@ class Application extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor:'#F79D42',
-    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    justifyContent: 'center',
+    flex: 1
   }
 });
 
