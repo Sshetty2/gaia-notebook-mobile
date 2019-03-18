@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
-
+import { Button } from 'react-native-elements';
+import {StyleSheet, View, TextInput} from 'react-native';
+import { Formik } from 'formik';
 import { Input } from 'react-native-elements';
 
 
-import {
-
-  StyleSheet,
-  View,
-  Text
-} from 'react-native';
-
 export default class NewItem extends Component {
-  handleChange = (event) => {
-    const value = event.target.value;
+
+  
+
+  handleChange = (text) => {
+    const value = text;
     this.props.updateNewItemValue(value);
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
+
+  
+
+  handleSubmit = (text) => {
     const { value } = this.props;
+    console.warn(value)
     this.props.addNewItem(value);
   }
 
@@ -26,23 +27,26 @@ export default class NewItem extends Component {
     const { value } = this.props;
 
     return (
-    <View>
-    <Input
-      placeholder='INPUT WITH ICON'
-      leftIcon={{ type: 'font-awesome', name: 'chevron-left' }}
-    />
-    </View>
+
+          <View style={styles.NewItem}>
+            <Input containerStyle={styles.NewItemInput} onChangeText={this.handleChange} />
+            <Button style={styles.NewItemButton} type='solid' onPress={this.handleSubmit} title="Submit" />
+          </View>
+
     );
   }
 }
 
 const styles = StyleSheet.create({
   NewItem: {
-    flex: 1,
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   NewItemInput: {
-    width: '100%'
+    width: 120,
+    height:40,
+  },
+  NewItemButton: {
+    height:40,
   }
 });
 

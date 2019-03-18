@@ -5,12 +5,10 @@ import NewItemContainer from '../components/TaskManager/containers/NewItemContai
 // import MarkAllAsUnpackedContainer from '../containers/MarkAllAsUnpackedContainer';
 // import UnpackedFilterContainer from '../containers/UnpackedFilterContainer';
 // import PackedFilterContainer from '../containers/PackedFilterContainer';
-// import UndoRedoContainer from '../containers/UndoRedoContainer'
+import UndoRedoContainer from '../components/TaskManager/containers/UndoRedoContainer'
 
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { Constants } from 'expo';
 
 
 class Application extends Component {
@@ -18,7 +16,8 @@ class Application extends Component {
     return (
       <View style={styles.container}>
         <NewItemContainer />
-        {/* <UndoRedoContainer />
+        <UndoRedoContainer />
+        {/*
         <UnpackedItemsContainer title="Unpacked Items" render={() => <UnpackedFilterContainer />} />
         <PackedItemsContainer title="Packed Items" render={() => <PackedFilterContainer />} />
         <MarkAllAsUnpackedContainer /> */}
@@ -29,8 +28,11 @@ class Application extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    margin: 'auto',
-    flex: .6
+    backgroundColor:'#F79D42',
+    flex: 1,
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'center',
   }
 });
 
