@@ -1,4 +1,6 @@
 import React from 'react';
+import { View } from 'react-native';
+import { Button } from 'react-native-elements'
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'; 
@@ -10,10 +12,10 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 }, dispatch);
 
 export default connect(null, mapDispatchToProps)(({ undo, redo }) => (
-    <div>
-        <button onClick = { undo }>Undo</button>
-        <button onClick = { redo }>Redo</button>
-    </div>
+    <View style={{flex: 1, flexDirection: 'row'}}>
+        <Button onPress = { undo }>Undo</Button>
+        <Button onPress = { redo }>Redo</Button>
+    </View>
 
 
 ))

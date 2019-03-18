@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Button, Input } from 'react-native-elements';
-import {StyleSheet, View} from 'react-native';
+import { Button } from 'react-native-elements';
+import {StyleSheet, View, TextInput} from 'react-native';
 import { Formik } from 'formik';
+
 
 export default class NewItem extends Component {
 
@@ -15,9 +16,9 @@ export default class NewItem extends Component {
 
   
 
-  handleSubmit = (event) => {
-    event.preventDefault();
+  handleSubmit = (text) => {
     const { value } = this.props;
+    console.warn(value)
     this.props.addNewItem(value);
   }
 
@@ -25,22 +26,14 @@ export default class NewItem extends Component {
     const { value } = this.props;
 
     return (
-      <Formik initialValues={{ email: '' }} onSubmit={(values, actions) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          actions.setSubmitting(false);
-        }, 1000);
-      }}>
-        {props => (
+
           <View style={{flex: 1, flexDirection: 'row'}}>
-            <Input containerStyle = {{width: 50}}
-              onBlur={props.handleBlur('email')}
-              onChange={this.handleChange}
+            <TextInput style={{height: 40, width: 50, borderColor: 'gray', borderWidth: 1}}
+              onChangeText={this.handleChange}
             />
-            <Button style={{width: 10 }} onPress={props.handleSubmit} title="Submit" />
+            <Button type='solid' onPress={this.handleSubmit} title="Submit" />
           </View>
-        )}
-      </Formik>
+
     );
   }
 }
@@ -49,7 +42,6 @@ const styles = StyleSheet.create({
   NewItem: {
     flex: 1,
     flexDirection: 'row',
-    alignItems: 'flex-end'
   },
   NewItemInput: {
     width: '70%'
