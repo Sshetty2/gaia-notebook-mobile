@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './Item.css';
+import { CheckBox, Button } from 'react-native-elements';
+import { View, Text } from 'react-native';
+
 
 class Item extends Component {
   render() {
     const { packed, id, value, onCheckOff, onRemove } = this.props;
     return (
-      <View className="Item">
-        <label htmlFor={id}>
-          <input
-            type="checkbox"
-            checked={packed}
-            onChange={onCheckOff}
-            id={id}
-          />
+      <View className="Item" style={{flexDirection: 'row'}}>
+      
+        <CheckBox
+          checked={packed}
+          onPress={onCheckOff}
+          id={id}
+        />
+        <Text>
           {value}
-        </label>
-        <button className="Item-remove" onClick={onRemove}>
+        </Text>
+        <Button className="Item-remove" onPress={onRemove}>
           Remove
-        </button>
+        </Button>
       </View>
     );
   }
@@ -37,3 +39,19 @@ Item.defaultProps = {
 };
 
 export default Item;
+
+
+// .Item-remove {
+//   background-color: white;
+//   color: #f65e81;
+//   border: none;
+//   margin-left: 1em;
+//   outline: none;
+//   padding: 0;
+// }
+
+// .Item-remove:hover {
+//   background-color: white;
+//   text-decoration: underline;
+// }
+

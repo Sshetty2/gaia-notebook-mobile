@@ -47,6 +47,15 @@ const styles = StyleSheet.create({
 });
 
 
+// .NewItem {
+//   display: flex;
+// }
+
+// .NewItem-input {
+//   width: 100%;
+// }
+
+
 
       // <form className="NewItem" onSubmit={this.handleSubmit}>
       //   <input

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Item from './Item';
-import './Items.css';
+import { StyleSheet, View, Text } from 'react-native';
 
 class Items extends Component {
   render() {
@@ -25,3 +25,12 @@ class Items extends Component {
 }
 
 export default Items;
+
+
+const styles = StyleSheet.create({
+  ItemsSearchTerm: {
+    backgroundColor: 'white',
+    marginBottom: '0.5em',
+    width: '100%'
+  }
+});
