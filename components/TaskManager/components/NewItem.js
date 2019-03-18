@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'react-native-elements';
 import {StyleSheet, View, TextInput} from 'react-native';
 import { Formik } from 'formik';
+import { Input } from 'react-native-elements';
 
 
 export default class NewItem extends Component {
@@ -27,11 +28,9 @@ export default class NewItem extends Component {
 
     return (
 
-          <View style={{flex: 1, flexDirection: 'row'}}>
-            <TextInput style={{height: 40, width: 50, borderColor: 'gray', borderWidth: 1}}
-              onChangeText={this.handleChange}
-            />
-            <Button type='solid' onPress={this.handleSubmit} title="Submit" />
+          <View style={styles.NewItem}>
+            <Input containerStyle={styles.NewItemInput} onChangeText={this.handleChange} />
+            <Button style={styles.NewItemButton} type='solid' onPress={this.handleSubmit} title="Submit" />
           </View>
 
     );
@@ -40,14 +39,14 @@ export default class NewItem extends Component {
 
 const styles = StyleSheet.create({
   NewItem: {
-    flex: 1,
     flexDirection: 'row',
   },
   NewItemInput: {
-    width: '70%'
+    width: 120,
+    height:40,
   },
   NewItemButton: {
-    width: '30%'
+    height:40,
   }
 });
 

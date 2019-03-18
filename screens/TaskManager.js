@@ -7,10 +7,8 @@ import NewItemContainer from '../components/TaskManager/containers/NewItemContai
 // import PackedFilterContainer from '../containers/PackedFilterContainer';
 import UndoRedoContainer from '../components/TaskManager/containers/UndoRedoContainer'
 
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { Constants } from 'expo';
 
 
 class Application extends Component {
@@ -30,7 +28,11 @@ class Application extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    
+    backgroundColor:'#F79D42',
+    flex: 1,
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'center',
   }
 });
 
