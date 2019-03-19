@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { CheckBox, Button } from 'react-native-elements';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 
 class Item extends Component {
   render() {
     const { packed, id, value, onCheckOff, onRemove } = this.props;
     return (
-      <View className="Item" style={{flexDirection: 'row'}}>
+      <View style={styles.container}>
       
         <CheckBox
           checked={packed}
           onPress={onCheckOff}
           id={id}
         />
-        <Text>
+        <Text style={styles.ItemText}>
           {value}
         </Text>
         <Button className="Item-remove" onPress={onRemove}>
@@ -40,6 +40,18 @@ Item.defaultProps = {
 
 export default Item;
 
+
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    flexDirection: 'row'
+  },
+  ItemText: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
+});
 
 // .Item-remove {
 //   background-color: white;
